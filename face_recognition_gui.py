@@ -1,30 +1,3 @@
-"""
-Face Recognition GUI with persistent profiles
-
-Features:
-- Create profiles: give a name, capture images from webcam (saves to profiles/<id>/)
-- Train recognizer: trains OpenCV LBPHFaceRecognizer on saved images and saves model to recognizer.yml
-- Live recognition: opens webcam and shows recognized profile name (or Unknown)
-- Manage profiles: list and delete profiles
-- Profiles metadata stored in a local SQLite database (profiles.db)
-
-Dependencies:
-- Python 3.8+
-- opencv-contrib-python
-- numpy
-- Pillow
-
-Install:
-    pip install opencv-contrib-python numpy pillow
-
-Run:
-    python face_recognition_gui.py
-
-Notes:
-- Requires a working webcam. If your webcam index isn't 0, change CAMERA_INDEX in the code.
-- LBPH works reasonably well for small-scale systems. For production or better accuracy, consider deep-learning based embeddings (face_recognition library).
-"""
-
 import os
 import cv2
 import sqlite3
@@ -328,3 +301,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
